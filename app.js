@@ -20,7 +20,9 @@ app.use("/api/v1", favourite);
 app.use("/api/v1", cart);
 app.use("/api/v1", orders);
 
-// creating port
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+// Define the port to listen on
+const PORT = process.env.PORT || 4050; // Default to 5000 if PORT is not set
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
